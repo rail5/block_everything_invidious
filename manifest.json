@@ -1,0 +1,25 @@
+{
+  "manifest_version": 2,
+
+  "name": "Block Everything Invidious",
+  "version": "1.0",
+  "author": "rail5",
+  "homepage_url": "https://github.com/rail5/block_everything_invidious",
+  "description": "This addon blocks manipulative elements on Invidious",
+  "icons": {
+    "128": "bc.png"
+  },
+  "applications": {
+    "gecko": {
+      "id": "rails7@rail5.org",
+      "strict_min_version": "52.0"
+    }
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://invidious.snopyta.org/feed*", "*://invidious.snopyta.org/watch*", "*://yewtu.be/feed*", "*://yewtu.be/watch*", "*://invidious.kavin.rocks/feed*", "*://invidious.kavin.rocks/watch*", "*://invidious-us.kavin.rocks/feed*", "*://invidious-us.kavin.rocks/watch*", "*://invidious-jp.kavin.rocks/feed*", "*://invidious-jp.kavin.rocks/watch*", "*://vid.puffyan.us/feed*", "*://vid.puffyan.us/watch*", "*://invidious.namazso.eu/feed*", "*://invidious.namazso.eu/watch*", "*://inv.riverside.rocks/feed*", "*://inv.riverside.rocks/watch*", "*://vid.mint.lgbt/feed*", "*://vid.mint.lgbt/watch*", "*://invidious.osi.kr/feed*", "*://invidious.osi.kr/watch*", "*://invidio.xamh.de/feed*", "*://invidio.xamh.de/watch*", "*://yt.artemislena.eu/feed*", "*://yt.artemislena.eu/watch*"],
+      "css": ["src/block_comments_youtube.css"]
+    }
+  ]
+}
